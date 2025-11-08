@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    container_name: hospital_web
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - static_volume:/app/static
+      - media_volume:/app/media
+    environment:
+      - DEBUG=True
+      - DJANGO_SETTINGS_MODULE=hospital.settings
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+
+volumes:
+  static_volume:
+  media_volume:
+

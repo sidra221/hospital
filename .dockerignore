@@ -27,13 +27,24 @@ db.sqlite3-journal
 .DS_Store
 Thumbs.db
 
-# Environment variables
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+*.md
+
+# Migration files (optional - remove if you want migrations in container)
+# migrations/
+
+# Other
 .env
 .env.local
 *.pem
 
-# Docker volumes (optional - keep if you don't want to commit)
-# docker-compose.override.yml
-
-# Documentation (local only)
-API_REQUESTS.md
